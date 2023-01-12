@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}Welcome To Index Page{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST" class="mt-5">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
